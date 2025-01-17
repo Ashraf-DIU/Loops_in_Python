@@ -15,16 +15,20 @@
 
 # Tuple
 # Taking input
-a = input("Enter elements separated by spaces: ").split()
+a = list(map(int, input("Enter elements separated by spaces: ").split()))
 
 # Converting list to tuple
 t = tuple(a)
-print("So the tuple is : ",t)
-x = 3
+print("So the tuple is:", t)
+print("Length of the tuple:", len(t))
+
+x = 3  # Element to search for
 i = 0
+
 while i < len(t):
-    if(t[i] == x):
-        print("Found at index ",i)
+    if t[i] == x:
+        print("Found at index", i)
     else:
         print("Finding...")
     i += 1
+
